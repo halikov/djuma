@@ -117,23 +117,26 @@ ul {
 }
 
 .features,
-.mosque-imams__container {
+.imams__list {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-.features__item {
+.features__item,
+.imams__list_item {
   grid-column: span 3;
 }
 
 @media all and (max-width: 800px) {
-  .features__item {
+  .features__item,
+  .imams__list_item {
     grid-column: span 6;
   }
 }
 
 @media all and (max-width: 600px) {
-  .features__item {
+  .features__item,
+  .imams__list_item {
     grid-column: span 12;
   }
 }
@@ -319,10 +322,10 @@ footer {
   position: relative;
   height: 50vh;
   margin-bottom: 20px;
-  padding: 0;
+  padding: 0 20px;
   
   background-color: #eeeeee;
-  background-image: url(https://via.placeholder.com/800x200);
+  background-image: url(../img/bismillah.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -337,6 +340,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .intro__description p {
@@ -344,13 +348,34 @@ footer {
   line-height: 1.3;
   font-weight: 400;
   text-align: center;
+  color: #ffffff;
 }
 
 .features__item {
 }
 
 .features__icon {
-  text-align: center;
+  display: block;
+  content: "";
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.features__item .books {
+  background-image: url(../img/books.svg);
+}
+.features__item .reading {
+  background-image: url(../img/reading.svg);
+}
+.features__item .calendar {
+  background-image: url(../img/calendar.svg);
+}
+
+.features__item .man {
+  background-image: url(../img/man.svg);
 }
 
 .features__description {
@@ -378,8 +403,13 @@ footer {
   flex-grow: 1;
 }
 
-.something-container {
+.something__container {
   margin-bottom: 30px;
+}
+
+.something__container p {
+  margin: 0;
+  padding: 0;
 }
 
 .mosque-imams h3 {
@@ -389,6 +419,18 @@ footer {
   font-size: 20px;
   line-height: 1.5;
   font-weight: 400;
+}
+
+.imams__list {
+  list-style: none;
+}
+
+.imams__item__icon {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .features__icon::before,
