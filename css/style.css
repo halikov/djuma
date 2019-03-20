@@ -176,7 +176,7 @@ ul {
 }
 
 .dresscode__description {
-  width: 50%;
+  /* width: 50%; */
 }
 
 .dresscode .image {
@@ -425,7 +425,13 @@ footer {
   list-style: none;
 }
 
+.imams__list_item {
+  display: flex;
+  flex-direction: column;
+}
+
 .imams__item__icon {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -433,16 +439,51 @@ footer {
   align-items: flex-start;
 }
 
-.features__icon::before,
-.features__icon::after {
-  content: '';
-  display: block;
-  clear: both;
+.imams__item__icon img {
+  width: 50%;
 }
 
+.imams__icon__name {
+  width: 45%;
+  margin: 0 auto;
+}
 
+.imams__icon__name h4 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+}
 
+.mosque__link {
+  color: inherit;
+  border-bottom: 1px dotted #6F873B;
+}
 
+.mosque__link:hover,
+.mosque__link:focus {
+  border-bottom: 1px solid #F0A613;
+}
+
+.mosque__link:active {
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #f0a613;
+}
+
+.imams__icon__name span {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.imams__item__description {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: left;
+}
 
 
 
